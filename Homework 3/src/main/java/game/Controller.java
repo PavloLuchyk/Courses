@@ -23,8 +23,9 @@ public class Controller {
 
         while (model.checkValue(inputIntValueWithScanner(sc)));
 
-        view.printMessage(View.CONGRATULATION + model.getSecretValue());
-        view.printMessage(View.YOUR_WAY + model.getYourWay());
+        view.printMessage(view.concatenationString(View.CONGRATULATION,
+               String.valueOf(model.getSecretValue()), View.YOUR_WAY, String.valueOf(model.getYourWay())));
+
     }
 
     private int inputIntValueWithScanner(Scanner sc) {
