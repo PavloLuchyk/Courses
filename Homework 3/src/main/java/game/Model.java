@@ -13,7 +13,7 @@ public class Model {
 
     private int secretValue;
 
-    private List<Integer> yourWay = new ArrayList<Integer>();
+    private List<Integer> yourWay = new ArrayList<>();
 
     // [1-99]
     public void setSecretValue(){

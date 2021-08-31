@@ -2,9 +2,6 @@ package game;
 
 import java.util.Scanner;
 
-/**
- * Created by Student on 22.02.2017.
- */
 public class Controller {
     private Model model;
     private View view;
@@ -27,7 +24,7 @@ public class Controller {
         while (model.checkValue(inputIntValueWithScanner(sc)));
 
         view.printMessage(View.CONGRATULATION + model.getSecretValue());
-        view.printMessage(View.YOUR_WAY + String.valueOf(model.getYourWay()));
+        view.printMessage(View.YOUR_WAY + model.getYourWay());
     }
 
     private int inputIntValueWithScanner(Scanner sc) {
