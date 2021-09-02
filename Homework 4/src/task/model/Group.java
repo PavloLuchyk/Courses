@@ -2,6 +2,9 @@ package task.model;
 
 import java.util.ResourceBundle;
 
+/**
+ * The enumeration that represents record group(e.g. FRIENDS)
+ */
 public enum Group {
     HOME("data.group.home"),
     WORK("data.group.work"),

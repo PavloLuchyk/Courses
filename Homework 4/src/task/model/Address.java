@@ -1,5 +1,8 @@
 package task.model;
 
+/**
+ * The class represents address with post index, homeTown, street, house number, flat number
+ */
 public class Address {
     private String index;
     private String homeTown;

@@ -3,6 +3,10 @@ package task.view;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+
+/**
+ * The class is responsible for the view and makes console output
+ */
 public class View {
 
     private final String messagesBundle = "messages";

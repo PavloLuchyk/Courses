@@ -1,5 +1,8 @@
 package task.view;
 
+/**
+ * The enumeration represents locale needed key from the properties files
+ */
 public enum MessageKeys {
     INPUT("data.input"),
     WRONG("data.wrong.input"),

@@ -2,6 +2,9 @@ package task.model;
 
 import java.time.LocalDateTime;
 
+/**
+ * Class that stores data and used as entity
+ */
 public class Record {
     private String firstName;
     private String lastName;
@@ -21,6 +24,26 @@ public class Record {
 
     private LocalDateTime creationDate;
     private LocalDateTime lastUpdateDate;
+
+    public Record(String firstName, String lastName, String fatherName, String nickName,
+                  String comment, Group group, String homePhone, String primaryNumber, String secondaryNumber,
+                  String email, String skype, Address address, LocalDateTime creationDate,
+                  LocalDateTime lastUpdateDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fatherName = fatherName;
+        this.nickName = nickName;
+        this.comment = comment;
+        this.group = group;
+        this.homePhone = homePhone;
+        this.primaryNumber = primaryNumber;
+        this.secondaryNumber = secondaryNumber;
+        this.email = email;
+        this.skype = skype;
+        this.address = address;
+        this.creationDate = creationDate;
+        this.lastUpdateDate = lastUpdateDate;
+    }
 
     public Record() {
 
