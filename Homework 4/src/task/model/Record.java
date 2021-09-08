@@ -28,10 +28,15 @@ public class Record {
     public Record(String firstName, String lastName, String fatherName, String nickName,
                   String comment, Group group, String homePhone, String primaryNumber, String secondaryNumber,
                   String email, String skype, Address address, LocalDateTime creationDate,
-                  LocalDateTime lastUpdateDate) {
+                  LocalDateTime lastUpdateDate) throws LoginAlreadyExistsException {
         this.firstName = firstName;
         this.lastName = lastName;
         this.fatherName = fatherName;
+        for (DBRecord login: DBRecord.values()) {
+            if (nickName.equals(login.getLogin())) {
+                throw new LoginAlreadyExistsException("Login " + nickName + " already exists!");
+            }
+        }
         this.nickName = nickName;
         this.comment = comment;
         this.group = group;

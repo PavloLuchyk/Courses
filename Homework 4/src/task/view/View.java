@@ -11,7 +11,7 @@ public class View {
 
     private final String messagesBundle = "messages";
     private ResourceBundle resourceBundle = ResourceBundle.getBundle(messagesBundle
-                                                                    , new Locale("ua","UA")
+                                                                    //, new Locale("ua","UA")
                                                                     );
 
     public void printCompoundMessage(String... messageKeys) {

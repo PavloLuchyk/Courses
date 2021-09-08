@@ -2,6 +2,7 @@ package task.controller;
 
 import task.model.Address;
 import task.model.Group;
+import task.model.LoginAlreadyExistsException;
 import task.model.Record;
 import task.view.MessageKeys;
 import task.view.View;
@@ -83,9 +84,15 @@ public class Recorder {
         this.lastUpdateDate = LocalDateTime.parse(
                 utilController.getCorrectString(MessageKeys.LAST_UPDATE_DATE.messageKey, Regexes.DATE_REGEX)
         );
-        return new Record(this.firstName,this.lastName, this.fatherName, this.nickName, this.comment,
-                        this.group, this.homePhone, this.primaryNumber, this.secondaryNumber, this.email, this.skype,
-                        this.address, this.creationDate, this.lastUpdateDate);
+        try {
+            return new Record(this.firstName, this.lastName, this.fatherName, this.nickName, this.comment,
+                    this.group, this.homePhone, this.primaryNumber, this.secondaryNumber, this.email, this.skype,
+                    this.address, this.creationDate, this.lastUpdateDate);
+        } catch (LoginAlreadyExistsException e) {
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+            return makeRecord(scanner);
+        }
     }
 
     /**
