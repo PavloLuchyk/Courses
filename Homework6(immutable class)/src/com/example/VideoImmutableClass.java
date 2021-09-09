@@ -13,5 +13,11 @@ public final class VideoImmutableClass {
         return new VideoImmutableClass(point1, point2);
     }
 
+    public int getPoint1() {
+        return point1;
+    }
 
+    public int getPoint2() {
+        return point2;
+    }
 }
